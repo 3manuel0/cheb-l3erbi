@@ -1,82 +1,69 @@
 <html>
-    <head>
-        <title>Duck Hunt Game</title>
-        <link rel="stylesheet" type="text/css" href="style2.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    </head>
+  <head>
+    <title>Duck Hunt Game</title>
+    <link rel="stylesheet" type="text/css" href="style2.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  </head>
 
-    <body  >
-        
-        <div id="scene" > 
-            <audio id="sound1" src="shoot1.mp3" preload="auto"></audio>
-            <div onclick="sound()">
-            <input type="checkbox" id="duck1" >
-            <label for="duck1" class="duck" ></label>
-            <input type="checkbox" id="duck2">
-            <label for="duck2" class="duck"></label>
-            <input type="checkbox" id="duck3">
-            <label for="duck3" class="duck"></label>
-            <input type="checkbox" id="duck4">
-            <label for="duck4" class="duck"></label>
-            <input type="checkbox" id="duck5">
-            <label for="duck5" class="duck"></label> 
-            <input type="checkbox" id="duck6">
-            <label for="duck6" class="duck"></label> 
-            <input type="checkbox" id="duck7">
-            <label for="duck7" class="duck"></label> 
-            <input type="checkbox" id="duck8">
-            <label for="duck8" class="duck"></label> 
-            <input type="checkbox" id="duck9">
-            <label for="duck9" class="duck"></label> 
-            <input type="checkbox" id="duck10">
-            <label for="duck10" class="duck"></label> 
-            <div id="score"> </div></div>
+  <body>
+    <div id="scene">
+      <audio id="sound1" src="shoot1.mp3" preload="auto"></audio>
+      <div onclick="sound()">
+        <input type="checkbox" id="duck1" />
+        <label for="duck1" class="duck"></label>
+        <input type="checkbox" id="duck2" />
+        <label for="duck2" class="duck"></label>
+        <input type="checkbox" id="duck3" />
+        <label for="duck3" class="duck"></label>
+        <input type="checkbox" id="duck4" />
+        <label for="duck4" class="duck"></label>
+        <input type="checkbox" id="duck5" />
+        <label for="duck5" class="duck"></label>
+        <input type="checkbox" id="duck6" />
+        <label for="duck6" class="duck"></label>
+        <input type="checkbox" id="duck7" />
+        <label for="duck7" class="duck"></label>
+        <input type="checkbox" id="duck8" />
+        <label for="duck8" class="duck"></label>
+        <input type="checkbox" id="duck9" />
+        <label for="duck9" class="duck"></label>
+        <input type="checkbox" id="duck10" />
+        <label for="duck10" class="duck"></label>
+        <div id="score"></div>
+      </div>
+    </div>
 
+    <div id="scene2">
+      <img src="winner.png" id="winner" />
 
+      <p id="situation"><a href="index.html">PLAY AGAIN</a></p>
+    </div>
+  </body>
+  <script>
+    function sound() {
+      var sound = new Audio("shoot1.mp3");
+      var score = $(":input");
+      sound.volume = 0.15;
+      var song = new Audio("winner1.mp3");
+      song.loop = true;
 
-
-
-        </div>
-        
-        <div id="scene2"> 
-           
-            <img src="winner.png" id="winner">
-            
-            <p id="situation"> <a href="game.html">PLAY AGAIN</a> </p>
-
-        </div>
-      
-    </body>
-    <script>
-       
-        function sound(){
-            var sound = new Audio("shoot1.mp3");
-            var score = $(':input');
-            sound.volume = 0.15; 
-            var song = new Audio("winner1.mp3");
-            song.loop=true;
-         
-            sound.play();
-            var s=0;
-            for (i=0; i<=9; i++){
-                if(score[i].checked){
-                    s=s+1;
-                    console.log(i);
-                    console.log(s);
-
-                };
-            };
-            if (s>=10){
-
-                setTimeout(function(){$("#scene2").css("display", "block")
-                $("#scene").css("display", "none") 
-                song.volume = 0.15; 
-                song.play();}, 600);
-
-
-            }
-  
-            
+      sound.play();
+      var s = 0;
+      for (i = 0; i <= 9; i++) {
+        if (score[i].checked) {
+          s = s + 1;
+          console.log(i);
+          console.log(s);
         }
-    </script>
+      }
+      if (s >= 10) {
+        setTimeout(function () {
+          $("#scene2").css("display", "block");
+          $("#scene").css("display", "none");
+          song.volume = 0.15;
+          song.play();
+        }, 600);
+      }
+    }
+  </script>
 </html>
