@@ -1,3 +1,4 @@
+const ducks = document.querySelector(".ducks");
 function sound() {
   var sound = new Audio("shoot1.mp3");
   var score = $(":input");
@@ -23,3 +24,6 @@ function sound() {
     }, 600);
   }
 }
+ducks.addEventListener("click", () => {
+  sound();
+});
