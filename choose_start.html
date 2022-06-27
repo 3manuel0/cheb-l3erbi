@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Duck Hunt Game</title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    </head>
+
+    <body>
+        
+        <div id="scene"> 
+     
+                <a href="laarbi.html" id="laarbi" class="laarbi"> </a>
+                <audio id="beep" preload="auto">
+                    <source src="laarbi.mp3"></source>
+                </audio>
+                <a href="#" id="houyam" class="houyam"><img src="lock.png"></a>
+                <audio id="beep2" preload="auto" >
+                    <source src="houyam.mp3"></source>
+                </audio>
+        
+          
+          
+            <p id="situation"> Will you choose <a href="laarbi.html"> CHEB LAARBI</a> or <a href="houyam.html"> CHEBBA HOUYAM </a>?</p>
+
+        </div>
+      		
+		<script>
+		
+            var beepOne1 = new Audio("laarbi.mp3");
+            
+          
+            $(".laarbi").mouseover(function() {
+            beepOne1.play();
+        });
+        
+        var beepOne2 = new Audio("houyam.mp3");
+        beepOne2.volume = 0.15;  
+            $(".houyam").mouseover(function() {
+            beepOne2.play();
+        });
+        
+     
+        </script>
+    </body>
+</html>

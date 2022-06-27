@@ -1,0 +1,79 @@
+body{
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1{
+    font-family: Papyrus;
+    font-size: 80px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    position: absolute;
+    left: 350px;
+}
+#scene{
+    background: url("banner.png") no-repeat;
+    height: 630px;
+    width: 1280px;
+    position: absolute;
+    background-size: cover;
+}
+#situation{
+    background-color: rgba(0, 0,0,.7 );
+    position: absolute;
+    top: 500px;
+    left: 300px;
+    padding: 15px;
+    width: 640px;
+    text-align: center;
+}
+
+#winner{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    animation: winner 8s linear infinite;
+}
+@keyframes winner {
+    0%{
+        left: 0%;
+        top: 0%;
+
+    }
+    20%{
+        left: 80%;
+        top: 0%;
+        
+    } 
+    40%{
+        left: 0%;
+        top: 60%;
+        
+    }
+    60%{
+        left: 40%;
+        top: 30%;
+        
+    }
+    80%{
+        left: 80%;
+        top: 60%; 
+    }
+    100%{
+        left: 0%;
+        top: 0%;
+
+    }
+    
+
+   
+
+}

@@ -1,0 +1,217 @@
+body{
+    background-color: black;
+    cursor: url('aims.png'), text;
+    overflow: hidden;
+   
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1{
+    font-family: Papyrus;
+    font-size: 80px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    position: absolute;
+    left: 350px;
+}
+#scene{
+    background: url("laarbistage1.png") no-repeat;
+    height: 630px;
+    width: 1300px;
+    position: absolute;
+}
+#situation{
+    background-color: rgba(0, 0,0,.7 );
+    position: absolute;
+    top: 500px;
+    left: 300px;
+    padding: 15px;
+    width: 640px;
+    text-align: center;
+}
+
+@keyframes duckfly1{
+    0%{
+        left: 95%;
+        top: 10%;
+    }
+    25%{
+        left: 65%;
+        top: 10%;
+    }
+    50%{
+        left: 35%;
+        top: 10%;
+    }
+    75%{
+        left: 5%;
+        top: 10%;
+    }
+    100%{
+        left: -25%;
+        top: 10%;
+    }
+}
+@keyframes duckfly2{
+    0%{
+        left: 95%;
+        top: 30%;
+    }
+    25%{
+        left: 65%;
+        top: 30%;
+    }
+    50%{
+        left: 35%;
+        top: 30%;
+    }
+    75%{
+        left: 5%;
+        top: 30%;
+    }
+    100%{
+        left: -85%;
+        top: 30%;
+    }
+}
+input + label{
+    position: absolute;
+    left: -100%;
+    z-index: 1;
+    width: 60px;
+    height: 62px;
+    display: block;
+    transform: translate(-50%,-50%);
+    background: url(duck.gif) no-repeat;
+    transform: scaleX(-1);
+    background-size: cover;
+    background-position: center;
+}
+input:checked + label{
+    opacity: 0;
+    transition: 0.7s;
+    transform: rotate(120deg);
+    transform-origin: 60%;
+    z-index: -5;
+}
+.duck:nth-last-of-type(1){
+    animation: duckfly1 6s linear 1s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(2){
+    animation: duckfly2 6s linear 1.5s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(3){
+    animation: duckfly1 6s linear 2s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(4){
+    animation: duckfly2 6s linear 2.5s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(5){
+    animation: duckfly1 6s linear 3s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(6){
+    animation: duckfly2 6s linear 3.5s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(7){
+    animation: duckfly1 6s linear 4s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(8){
+    animation: duckfly2 6s linear 4.5s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(9){
+    animation: duckfly1 6s linear 5s infinite;
+    cursor: url('aims.png'), text;
+}
+.duck:nth-last-of-type(10){
+    animation: duckfly2 6s linear 5.5s infinite;
+    cursor: url('aims.png'), text;
+}
+#score{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: #dadada;
+    width: 98.45%;
+    z-index: 2;
+    text-align: center;
+    font-size: 30px;
+}
+#score::after{
+    content: counter(score);
+    display: inline-block;
+}
+#score::before{
+    content: 'Score: ';
+    display: inline-block;
+    margin: 0px 5px;
+}
+input:checked{
+    counter-increment: score;
+}
+input{
+    visibility: hidden;
+}
+#scene2{
+    display: none;
+    background: url("banner.png") no-repeat;
+    height: 630px;
+    width: 1280px;
+    position: absolute;
+    background-size: cover;
+}
+#winner{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    animation: winner 8s linear infinite;
+}
+@keyframes winner {
+    0%{
+        left: 0%;
+        top: 0%;
+
+    }
+    20%{
+        left: 80%;
+        top: 0%;
+        
+    } 
+    40%{
+        left: 0%;
+        top: 60%;
+        
+    }
+    60%{
+        left: 40%;
+        top: 30%;
+        
+    }
+    80%{
+        left: 80%;
+        top: 60%; 
+    }
+    100%{
+        left: 0%;
+        top: 0%;
+
+    }
+    
+
+   
+
+}
